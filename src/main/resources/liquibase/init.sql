@@ -1,3 +1,9 @@
+--liquibase formatted sql
+
+--changeset popov:1
+
+
+
 CREATE TABLE notification_tasks
 (
 
