@@ -3,5 +3,10 @@ package com.example.telegrambot.repository;
 import com.example.telegrambot.entity.NotificationTask;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface NotificationTaskRepository extends JpaRepository<NotificationTask, Long> {
+import java.time.LocalDateTime;
+import java.util.List;
+
+public interface NotificationTaskRepository extends JpaRepository<NotificationTask,Long> {
+
+    List<NotificationTask> findAllByNotificationDataTime(LocalDateTime localDateTime);
 }
